@@ -10,6 +10,8 @@ class MySmartAgent(EvaluationAgent):
         getal = 1
         if is_winner(board, my_symbol):
             getal = 10
+        elif can_win(board, opponent_symbol):
+            getal = -10
         return getal
     
 my_random_agent = MyRandomAgent()
