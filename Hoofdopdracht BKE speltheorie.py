@@ -8,6 +8,8 @@ class MyRandomAgent(EvaluationAgent):
 class MySmartAgent(EvaluationAgent):
     def evaluate(self, board, my_symbol, opponent_symbol):
         getal = 1
+        if is_winner(board, my_symbol):
+            getal = 10
         return getal
     
 my_random_agent = MyRandomAgent()
