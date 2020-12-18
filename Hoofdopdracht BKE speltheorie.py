@@ -21,4 +21,7 @@ class MySmartAgent(EvaluationAgent):
 my_random_agent = MyRandomAgent()
 my_smart_agent = MySmartAgent()
 
-start(player_o=my_smart_agent, player_x=my_random_agent)
+
+validation_result = validate(agent_x=my_smart_agent, agent_o=my_random_agent, iterations=1000)
+ 
+plot_validation(validation_result)
